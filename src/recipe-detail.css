@@ -1,0 +1,149 @@
+.recipe-container {
+    min-height: 90vh;
+    margin-right: 20%;
+    margin-left: 20%;
+}
+
+.recipe-inner-container {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    min-height: 100vh;
+}
+
+.details {
+    color: var(--darkcolor);
+}
+
+.details-header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 1rem;
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+}
+
+.details-header > p {
+    margin-top: 1rem;
+    color: var(--darkcolor);
+    margin-bottom: 0.9rem;
+}
+
+.details-header > h3 {
+    color: var(--darkcolor);
+    padding-right: 4vw;
+}
+
+.fa-clock-rotate-left {
+    padding-right: 0.5rem;
+}
+
+#article {
+    display: flex;
+    justify-content: center;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    margin-left: 35%;
+    background: var(--lightcolor);
+    color: whitesmoke;
+    max-width: max-content;
+    padding: 0.5rem;
+    border-radius: 0.3rem;
+}
+
+#article:hover {
+    background: var(--lighthovercolor);
+}
+
+#article:active {
+    transition: 0.3s;
+    transform: scale(90%);
+    cursor: wait;
+}
+
+.recipe-text {
+    margin-left: 1rem;
+    color: inherit;
+}
+
+.recipe-text > p {
+    margin-top: 1rem;
+    color: inherit;
+}
+
+.recipe-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.recipe-image img {
+    width: 300px;
+    height: auto;
+    border-radius: 0.3rem;
+}
+
+.instructions {
+    color: var(--darkcolor);
+}
+
+.instructions-header {
+    margin-left: 1rem;
+    margin-top: 1rem;
+    color: inherit;
+}
+
+.instructions-header > ul, li {
+    margin-left: 2rem;
+    margin-top: 1rem;
+    color: inherit;
+}
+
+.nutrients-header, h4 {
+    margin-top: 1rem;
+    color: var(--darkcolor);
+}
+
+.nutrients-header > h4 {
+    margin-left: 1rem;
+}
+
+.nutrients-table, tr, td {
+    border-collapse: collapse;
+    margin-top: 1rem;
+    margin-left: 1rem;
+    min-width: 7vw;
+    color: var(--darkcolor);
+}
+
+.labels-container {
+    margin-top: 1rem;
+    margin-left: 20%;
+    margin-right: 20%;
+}
+
+.labels-header {
+    margin-left: 1rem;
+    color: var(--darkcolor);
+    padding-top: 3rem;
+}
+
+.l-box {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    width: 100%;
+    height: auto;
+}
+
+.l {
+    padding: 0.5em;
+    width: max-content;
+}
+
+.l > p {
+    background-color: var(--lightcolor);
+    padding: 0.4em;
+    border-radius: 100vh;
+    color: whitesmoke;
+}
