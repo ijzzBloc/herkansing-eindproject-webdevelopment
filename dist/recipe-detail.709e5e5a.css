@@ -1,0 +1,151 @@
+.recipe-container {
+  min-height: 90vh;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.recipe-inner-container {
+  min-height: 100vh;
+  grid-template-columns: repeat(2, 50%);
+  display: grid;
+}
+
+.details {
+  color: var(--darkcolor);
+}
+
+.details-header {
+  justify-content: flex-start;
+  align-items: center;
+  margin-left: 1rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  display: flex;
+}
+
+.details-header > p {
+  color: var(--darkcolor);
+  margin-top: 1rem;
+  margin-bottom: .9rem;
+}
+
+.details-header > h3 {
+  color: var(--darkcolor);
+  padding-right: 4vw;
+}
+
+.fa-clock-rotate-left {
+  padding-right: .5rem;
+}
+
+#article {
+  background: var(--lightcolor);
+  color: #f5f5f5;
+  max-width: max-content;
+  border-radius: .3rem;
+  justify-content: center;
+  margin-top: 10%;
+  margin-bottom: 10%;
+  margin-left: 35%;
+  padding: .5rem;
+  display: flex;
+}
+
+#article:hover {
+  background: var(--lighthovercolor);
+}
+
+#article:active {
+  cursor: wait;
+  transition: all .3s;
+  transform: scale(.9);
+}
+
+.recipe-text {
+  color: inherit;
+  margin-left: 1rem;
+}
+
+.recipe-text > p {
+  color: inherit;
+  margin-top: 1rem;
+}
+
+.recipe-image {
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.recipe-image img {
+  width: 300px;
+  height: auto;
+  border-radius: .3rem;
+}
+
+.instructions {
+  color: var(--darkcolor);
+}
+
+.instructions-header {
+  color: inherit;
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.instructions-header > ul, li {
+  color: inherit;
+  margin-top: 1rem;
+  margin-left: 2rem;
+}
+
+.nutrients-header, h4 {
+  color: var(--darkcolor);
+  margin-top: 1rem;
+}
+
+.nutrients-header > h4 {
+  margin-left: 1rem;
+}
+
+.nutrients-table, tr, td {
+  border-collapse: collapse;
+  min-width: 7vw;
+  color: var(--darkcolor);
+  margin-top: 1rem;
+  margin-left: 1rem;
+}
+
+.labels-container {
+  margin-top: 1rem;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.labels-header {
+  color: var(--darkcolor);
+  margin-left: 1rem;
+  padding-top: 3rem;
+}
+
+.l-box {
+  width: 100%;
+  height: auto;
+  flex-wrap: wrap;
+  padding: 1rem;
+  display: flex;
+}
+
+.l {
+  width: max-content;
+  padding: .5em;
+}
+
+.l > p {
+  background-color: var(--lightcolor);
+  color: #f5f5f5;
+  border-radius: 100vh;
+  padding: .4em;
+}
+
+/*# sourceMappingURL=recipe-detail.709e5e5a.css.map */
