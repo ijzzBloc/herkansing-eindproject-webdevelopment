@@ -541,13 +541,11 @@ function getParameter(recipeID) {
 let recipeID = getParameter("recipeID");
 (0, _main.fetchRecipe)(recipeID).then((result)=>{
     console.log(result.data.recipe);
-    let article = document.getElementById("article");
     let recipeHeader = document.getElementById("details-header");
     let recipeDetail = result.data.recipe;
     let recipeIMG = document.getElementById("recipe-image");
     let ingredients = document.getElementById("instructions");
     let nutrients = document.getElementById("nutrients-table");
-    let recipeText = document.getElementById("recipe-text");
     let labels = document.getElementById("l-box");
     recipeHeader.innerHTML = "";
     let recipeHeaderHTML = '<div class="details">\n<div class="details-header">\n<h3>' + recipeDetail.label + "</h3>\n" + '<p><i class="fa-solid fa-clock-rotate-left"></i>' + recipeDetail.totalTime + "mins.</p >\n" + "</div>\n" + '<div class="recipe-text">\n' + "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A culpa cum doloribus eligendi eveniet\n" + "                        harum ipsa itaque, magni provident quae quas quisquam quod quos recusandae reiciendis sit\n" + "                        temporibus vitae voluptatem.</p>\n" + "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. A beatae doloremque non sit tempora.\n" + "                        Commodi ea eaque quod repudiandae sequi.</p>\n" + "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad, consectetur consequuntur eaque ex\n" + "                        fugit illum incidunt ipsum, iste quisquam reiciendis sint sit soluta tenetur! Amet et hic\n" + "                        labore, nihil nisi vel. A dignissimos eos natus omnis quaerat quidem repellendus veritatis.</p>\n" + "<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ad asperiores beatae, consectetur\n" + "                        dicta, eos est eveniet facere harum id, libero perferendis quaerat quas qui quidem quisquam ut\n" + "                        vel vitae voluptate.</p>\n" + '<a id="article" href=' + recipeDetail.url + ">Original Article</a>\n" + "</div>\n" + "</div>";

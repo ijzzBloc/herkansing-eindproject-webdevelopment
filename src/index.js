@@ -1,4 +1,3 @@
-const axios = require('axios').default;
 //****************************************Slider****************************************//
 import {
     sliderData
@@ -90,7 +89,3 @@ searchSubmit.addEventListener('click', () => {
         alert('Please enter a query in searchbar.')
     }
 })
-
-function clearBox(elementID) {
-    document.getElementById(elementID).innerHTML = "";
-}

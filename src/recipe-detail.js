@@ -11,13 +11,11 @@ function getParameter(recipeID) {
 let recipeID = (getParameter('recipeID'))
 fetchRecipe(recipeID).then((result) => {
     console.log(result.data.recipe)
-    let article = document.getElementById('article')
     let recipeHeader = document.getElementById('details-header')
     let recipeDetail = result.data.recipe
     let recipeIMG = document.getElementById('recipe-image')
     let ingredients = document.getElementById('instructions')
     let nutrients = document.getElementById('nutrients-table')
-    let recipeText = document.getElementById('recipe-text')
     let labels = document.getElementById('l-box')
 
 

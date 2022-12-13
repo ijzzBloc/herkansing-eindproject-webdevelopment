@@ -534,7 +534,6 @@ function hmrAcceptRun(bundle, id) {
 },{}],"8lqZg":[function(require,module,exports) {
 //****************************************Slider****************************************//
 var _main = require("./main");
-const axios = require("axios").default;
 let slideTrack = document.getElementById("slide-track");
 (0, _main.sliderData)().then((result)=>{
     let slideResult = result;
@@ -584,10 +583,7 @@ searchSubmit.addEventListener("click", ()=>{
     });
     else alert("Please enter a query in searchbar.");
 });
-function clearBox(elementID) {
-    document.getElementById(elementID).innerHTML = "";
-}
 
-},{"axios":"jo6P5","./main":"gLLPy"}]},["ShInH","8lqZg"], "8lqZg", "parcelRequire549b")
+},{"./main":"gLLPy"}]},["ShInH","8lqZg"], "8lqZg", "parcelRequire549b")
 
 //# sourceMappingURL=index.975ef6c8.js.map
