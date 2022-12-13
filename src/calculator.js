@@ -38,7 +38,7 @@ calcSubmit.addEventListener('click', () => {
             infoContainer.innerHTML = kcalHTML;
             foundIngredient = kcalObject[0];
         })
-            .catch(reason => {
+            .catch(() => {
                 alert('Product cannot be found, please try again.')
             })
     } else {

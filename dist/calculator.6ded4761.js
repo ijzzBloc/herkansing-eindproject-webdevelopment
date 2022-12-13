@@ -553,7 +553,7 @@ calcSubmit.addEventListener("click", ()=>{
         kcalHTML += '<div id="info">\n<table class="resultstable">\n<tr>\n<th>Product</th>\n<th>Quantity</th>\n<th>Unit</th>\n</tr>\n<tr>\n<td>' + kcalObject[0].food.label + "</td>\n" + "<td>" + kcalObject[0].quantity + "</td>\n" + "<td>" + kcalObject[0].measure.label + "</td>\n" + "</tr>\n" + "</table>\n" + "</div>";
         infoContainer.innerHTML = kcalHTML;
         foundIngredient = kcalObject[0];
-    }).catch((reason)=>{
+    }).catch(()=>{
         alert("Product cannot be found, please try again.");
     });
     else alert("Please enter a product in searchbar.");

@@ -1,6 +1,4 @@
-import {
-    fetchRecipe
-} from './main'
+import {fetchRecipe} from './main'
 
 function getParameter(recipeID) {
     let address = window.location.search
@@ -19,8 +17,7 @@ fetchRecipe(recipeID).then((result) => {
 
 
     recipeHeader.innerHTML = ""
-    let recipeHeaderHTML =
-        '<div class="details">\n' +
+    recipeHeader.innerHTML = '<div class="details">\n' +
         '<div class="details-header">\n' +
         '<h3>' + recipeDetail.label + '</h3>\n' +
         '<p><i class="fa-solid fa-clock-rotate-left"></i>' + recipeDetail.totalTime + 'mins.</p >\n' +
@@ -39,14 +36,11 @@ fetchRecipe(recipeID).then((result) => {
         '                        vel vitae voluptate.</p>\n' +
         '<a id="article" href=' + recipeDetail.url + '>Original Article</a>\n' +
         '</div>\n' +
-        '</div>'
-    recipeHeader.innerHTML = recipeHeaderHTML;
+        '</div>';
     recipeIMG.innerHTML = ""
-    let recipesIMGHTML =
-        '<div class="recipe-image" id="recipe-image">\n' +
+    recipeIMG.innerHTML = '<div class="recipe-image" id="recipe-image">\n' +
         '<img alt="" src=' + recipeDetail.image + '>\n' +
-        '</div>'
-    recipeIMG.innerHTML = recipesIMGHTML;
+        '</div>';
     ingredients.innerHTML = ""
     let ingredientsHTML = "";
     let ingredientsCount = recipeDetail.ingredients.length
