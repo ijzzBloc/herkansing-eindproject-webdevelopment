@@ -54,17 +54,14 @@ searchSubmit.addEventListener('click', () => {
         fetchData(userInputText, mtOptValue, csOptValue, dtOptValue, tmOptValue).then((result) => {
             searchContainer.innerHTML = "";
             let recipesResult = result;
-            console.log(recipesResult)
             let recipesResultCount = recipesResult.data.hits.length
             if (recipesResultCount >= 1) {
                 let recipesHTML = ""
                 for (let i = 0; i < recipesResultCount; i++) {
-                    console.log(recipesResult.data.hits[i].recipe)
                     let recipeObject = recipesResult.data.hits[i].recipe;
                     let recipeDetail = recipeObject.uri
                     let recipeDetailArray = recipeDetail.split('_')
                     let recipeDetailId = recipeDetailArray[1]
-                    console.log(recipeDetailId)
                     recipesHTML +=
                         '<a href="recipe-detail.html?recipeID=' + recipeDetailId + '" class="card card-1" id="card">\n' +
                         ' <div class="card-header card-image">\n' +

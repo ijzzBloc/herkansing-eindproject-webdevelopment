@@ -18,7 +18,6 @@ calcSubmit.addEventListener('click', () => {
         calcData(calcInputText).then((result) => {
             infoContainer.innerHTML = "";
             let kcalResult = result;
-            console.log(kcalResult.data.parsed)
             let kcalHTML = ""
             let kcalObject = kcalResult.data.parsed;
             kcalHTML +=
@@ -99,7 +98,6 @@ addBttn.addEventListener('click', () => {
 function doCalc(ingredientResult) {
     if (ingredientResult != null) {
         addIngredients(ingredientResult, servingAmount.value)
-        console.log(ingredients);
         counter++;
 
     } else {

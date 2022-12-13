@@ -24,7 +24,6 @@ export async function sliderData() {
                 })
         })
     } catch (e) {
-        console.log(e)
     }
 }
 //****************************************Search****************************************//
@@ -53,7 +52,6 @@ export async function fetchData(query, mtOptValue, csOptValue, dtOptValue, tmOpt
                 })
         })
     } catch (e) {
-        console.log(e)
     }
 }
 export async function fetchRecipe(recipeID) {
@@ -75,7 +73,6 @@ export async function fetchRecipe(recipeID) {
                 })
         })
     } catch (e) {
-        console.log(e)
     }
 }
 //****************************************Calculator****************************************//
@@ -98,6 +95,5 @@ export async function calcData(calcInputText) {
                 })
         })
     } catch (e) {
-        console.log(e)
     }
 }

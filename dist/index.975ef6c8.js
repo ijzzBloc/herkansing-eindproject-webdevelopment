@@ -563,17 +563,14 @@ searchSubmit.addEventListener("click", ()=>{
     if (userInputText !== "") (0, _main.fetchData)(userInputText, mtOptValue, csOptValue, dtOptValue, tmOptValue).then((result)=>{
         searchContainer.innerHTML = "";
         let recipesResult = result;
-        console.log(recipesResult);
         let recipesResultCount = recipesResult.data.hits.length;
         if (recipesResultCount >= 1) {
             let recipesHTML = "";
             for(let i = 0; i < recipesResultCount; i++){
-                console.log(recipesResult.data.hits[i].recipe);
                 let recipeObject = recipesResult.data.hits[i].recipe;
                 let recipeDetail = recipeObject.uri;
                 let recipeDetailArray = recipeDetail.split("_");
                 let recipeDetailId = recipeDetailArray[1];
-                console.log(recipeDetailId);
                 recipesHTML += '<a href="recipe-detail.html?recipeID=' + recipeDetailId + '" class="card card-1" id="card">\n' + ' <div class="card-header card-image">\n' + '    <img alt="" src=' + recipeObject.image + ">\n" + "     </div>\n" + ' <div class="card-body">\n' + "     <p>" + recipeObject.label + "</p>\n" + " </div>\n" + ' <div class="card-footer">\n' + "     <p>" + Math.trunc(recipeObject.calories) + ".Kcal&nbsp;|&nbsp;" + recipeObject.ingredients.length + ".Ingredients</p>\n" + '<p><i class="fa-solid fa-clock-rotate-left"></i>&nbsp;' + recipeObject.totalTime + "</p>\n" + " </div>\n" + " </a>";
             }
             searchContainer.innerHTML = recipesHTML;

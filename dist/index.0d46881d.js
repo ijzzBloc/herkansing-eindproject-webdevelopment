@@ -561,9 +561,7 @@ async function sliderData() {
                 reject(result);
             });
         });
-    } catch (e) {
-        console.log(e);
-    }
+    } catch (e) {}
 }
 async function fetchData(query, mtOptValue, csOptValue, dtOptValue, tmOptValue) {
     try {
@@ -585,9 +583,7 @@ async function fetchData(query, mtOptValue, csOptValue, dtOptValue, tmOptValue) 
                 reject(result);
             });
         });
-    } catch (e) {
-        console.log(e);
-    }
+    } catch (e) {}
 }
 async function fetchRecipe(recipeID) {
     try {
@@ -604,9 +600,7 @@ async function fetchRecipe(recipeID) {
                 reject(result);
             });
         });
-    } catch (e) {
-        console.log(e);
-    }
+    } catch (e) {}
 }
 async function calcData(calcInputText) {
     try {
@@ -623,9 +617,7 @@ async function calcData(calcInputText) {
                 reject(result);
             });
         });
-    } catch (e) {
-        console.log(e);
-    }
+    } catch (e) {}
 }
 
 },{"dotenv":"lErsX","axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lErsX":[function(require,module,exports) {

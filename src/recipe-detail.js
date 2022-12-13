@@ -10,7 +10,6 @@ function getParameter(recipeID) {
 
 let recipeID = (getParameter('recipeID'))
 fetchRecipe(recipeID).then((result) => {
-    console.log(result.data.recipe)
     let recipeHeader = document.getElementById('details-header')
     let recipeDetail = result.data.recipe
     let recipeIMG = document.getElementById('recipe-image')
@@ -51,11 +50,9 @@ fetchRecipe(recipeID).then((result) => {
     ingredients.innerHTML = ""
     let ingredientsHTML = "";
     let ingredientsCount = recipeDetail.ingredients.length
-    console.log(ingredientsCount)
     if (ingredientsCount >= 1) {
         for (let i = 0; i < ingredientsCount; i++) {
             let ingredientsObject = result.data.recipe.ingredients[i]
-            console.log(ingredientsObject)
             ingredientsHTML +=
                 '<li>' + ingredientsObject.text + '</li>'
         }
