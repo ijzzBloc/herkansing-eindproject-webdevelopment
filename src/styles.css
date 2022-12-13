@@ -52,7 +52,9 @@
     margin-right: 20%;
     background-color: whitesmoke;
 }
-
+.header-item-2 > ul {
+    list-style-type: none;
+}
 .navbar-a {
     margin: 10px;
     background-color: whitesmoke;
