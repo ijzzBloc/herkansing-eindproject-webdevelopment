@@ -1,7 +1,8 @@
 require('dotenv').config()
 const axios = require('axios').default;
 
-//****************************************Slider****************************************//
+//***********************************Slider****************************************//
+//***********************************Get request to inject random recipes @index.js**//
 export async function sliderData() {
     try {
         return new Promise(async (resolve, reject) => {
@@ -27,6 +28,7 @@ export async function sliderData() {
     }
 }
 //****************************************Search****************************************//
+//****************************************Get request based on user input to inject @index.js**//
 
 export async function fetchData(query, mtOptValue, csOptValue, dtOptValue, tmOptValue) {
     try {
@@ -54,6 +56,8 @@ export async function fetchData(query, mtOptValue, csOptValue, dtOptValue, tmOpt
     } catch (e) {
     }
 }
+//***********************************Recipe ID**************************//
+//***********************************Fetches ID from recipe chosen by user to export for inject @recipe-detail.js**//
 export async function fetchRecipe(recipeID) {
     try {
         return new Promise(async (resolve, reject) => {
@@ -75,7 +79,8 @@ export async function fetchRecipe(recipeID) {
     } catch (e) {
     }
 }
-//****************************************Calculator****************************************//
+//***********************************Calculator****************************************//
+//***********************************Get request @calculator.js***********************//
 export async function calcData(calcInputText) {
     try {
         return new Promise(async (resolve, reject) => {

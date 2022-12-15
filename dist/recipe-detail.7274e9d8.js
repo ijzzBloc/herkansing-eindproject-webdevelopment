@@ -532,6 +532,8 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"DJpjy":[function(require,module,exports) {
+//***********************************Recipe inject**************************//
+//***********************************Injects user chosen recipe details @recipe-detail.html**//
 var _main = require("./main");
 function getParameter(recipeID) {
     let address = window.location.search;

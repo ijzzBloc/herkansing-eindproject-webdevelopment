@@ -1,3 +1,5 @@
+//***********************************Ingredient search**************************//
+//***********************************Import result based on user input to inject**//
 import {calcData} from "./main";
 
 let calcInput = document.getElementById('kcalsearch');
@@ -45,7 +47,8 @@ calcSubmit.addEventListener('click', () => {
         alert('Please enter a product in searchbar.')
     }
 })
-
+//***********************************Calculator**************************//
+//***********************************inject table and calculate result**//
 addBttn.addEventListener('click', () => {
     if (foundIngredient != null || servingAmount.value === '') {
         doCalc(foundIngredient);
@@ -94,7 +97,8 @@ addBttn.addEventListener('click', () => {
 
 });
 
-
+//***********************************Counter function**************************//
+//***********************************Counter and calculate additional result from Ingredient search**//
 function doCalc(ingredientResult) {
     if (ingredientResult != null) {
         addIngredients(ingredientResult, servingAmount.value)

@@ -534,12 +534,17 @@ function hmrAcceptRun(bundle, id) {
 },{}],"gLLPy":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-//****************************************Slider****************************************//
+//***********************************Slider****************************************//
+//***********************************Get request to inject random recipes @index.js**//
 parcelHelpers.export(exports, "sliderData", ()=>sliderData);
 //****************************************Search****************************************//
+//****************************************Get request based on user input to inject @index.js**//
 parcelHelpers.export(exports, "fetchData", ()=>fetchData);
+//***********************************Recipe ID**************************//
+//***********************************Fetches ID from recipe chosen by user to export for inject @recipe-detail.js**//
 parcelHelpers.export(exports, "fetchRecipe", ()=>fetchRecipe);
-//****************************************Calculator****************************************//
+//***********************************Calculator****************************************//
+//***********************************Get request @calculator.js***********************//
 parcelHelpers.export(exports, "calcData", ()=>calcData);
 require("dotenv").config();
 const axios = require("axios").default;

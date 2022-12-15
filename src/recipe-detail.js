@@ -1,3 +1,5 @@
+//***********************************Recipe inject**************************//
+//***********************************Injects user chosen recipe details @recipe-detail.html**//
 import {fetchRecipe} from './main'
 
 function getParameter(recipeID) {

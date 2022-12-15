@@ -1,4 +1,5 @@
-//****************************************Slider****************************************//
+//***********************************Slider****************************************//
+//***********************************Import and inject result from get request @main.js**//
 import {
     sliderData
 } from './main'
@@ -32,7 +33,8 @@ sliderData().then((result) => {
         slideTrack.innerHTML = TrackHTML;
     }
 })
-//****************************************Search****************************************//
+//***********************************Search****************************************//
+//***********************************Import and inject result based on user input @main.js**//
 import {
     fetchData
 } from "./main"

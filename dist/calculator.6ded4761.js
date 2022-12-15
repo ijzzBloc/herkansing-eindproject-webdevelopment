@@ -532,6 +532,8 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"9WiAu":[function(require,module,exports) {
+//***********************************Ingredient search**************************//
+//***********************************Import result based on user input to inject**//
 var _main = require("./main");
 let calcInput = document.getElementById("kcalsearch");
 let calcSubmit = document.getElementById("kcal-search-bttn");
@@ -558,6 +560,8 @@ calcSubmit.addEventListener("click", ()=>{
     });
     else alert("Please enter a product in searchbar.");
 });
+//***********************************Calculator**************************//
+//***********************************inject table and calculate result**//
 addBttn.addEventListener("click", ()=>{
     if (foundIngredient != null || servingAmount.value === "") {
         doCalc(foundIngredient);
@@ -589,6 +593,8 @@ addBttn.addEventListener("click", ()=>{
         infoContainer.innerHTML = "";
     }
 });
+//***********************************Counter function**************************//
+//***********************************Counter and calculate additional result from Ingredient search**//
 function doCalc(ingredientResult) {
     if (ingredientResult != null) {
         addIngredients(ingredientResult, servingAmount.value);

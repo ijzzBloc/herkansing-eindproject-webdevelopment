@@ -532,7 +532,8 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"8lqZg":[function(require,module,exports) {
-//****************************************Slider****************************************//
+//***********************************Slider****************************************//
+//***********************************Import and inject result from get request @main.js**//
 var _main = require("./main");
 let slideTrack = document.getElementById("slide-track");
 (0, _main.sliderData)().then((result)=>{
@@ -542,7 +543,7 @@ let slideTrack = document.getElementById("slide-track");
         let TrackHTML = "";
         for(let i = 0; i < slideResultCount; i++){
             let slideObject = slideResult.data.hits[i].recipe;
-            TrackHTML += "<a href=" + slideObject.url + ' class="slide" id="slide">\n' + '<div class="slide-header slide-image">\n' + '<img alt="" src=' + slideObject.image + ">\n" + "</div>\n" + '<div class="slide-body">\n' + "<p>" + slideObject.label + "</p>\n" + "</div>\n" + '<div class="slide-footer">\n' + '<div class="slfdiv">\n' + "<p>" + Math.trunc(slideObject.calories) + ".Kcal&nbsp;|&nbsp;" + slideObject.ingredients.length + ".Ingredients</p>\n" + "</div>\n" + '<div class="slfdiv">\n' + '<p class="slfdiv"><i class="fa-solid fa-clock-rotate-left"></i>' + slideObject.totalTime + "</p>\n" + "</div>\n" + "</div>\n" + "</a>";
+            TrackHTML += "<a href=" + slideObject.url + ' class="slide" id="slide">\n' + '<div class="slide-header slide-image">\n' + '<img alt="recipe image" src=' + slideObject.image + ">\n" + "</div>\n" + '<div class="slide-body">\n' + "<p>" + slideObject.label + "</p>\n" + "</div>\n" + '<div class="slide-footer">\n' + '<div class="slfdiv">\n' + "<p>" + Math.trunc(slideObject.calories) + ".Kcal&nbsp;|&nbsp;" + slideObject.ingredients.length + ".Ingredients</p>\n" + "</div>\n" + '<div class="slfdiv">\n' + '<p class="slfdiv"><i class="fa-solid fa-clock-rotate-left"></i>' + slideObject.totalTime + "</p>\n" + "</div>\n" + "</div>\n" + "</a>";
         }
         slideTrack.innerHTML = TrackHTML;
     }
@@ -571,7 +572,7 @@ searchSubmit.addEventListener("click", ()=>{
                 let recipeDetail = recipeObject.uri;
                 let recipeDetailArray = recipeDetail.split("_");
                 let recipeDetailId = recipeDetailArray[1];
-                recipesHTML += '<a href="recipe-detail.html?recipeID=' + recipeDetailId + '" class="card card-1" id="card">\n' + ' <div class="card-header card-image">\n' + '    <img alt="" src=' + recipeObject.image + ">\n" + "     </div>\n" + ' <div class="card-body">\n' + "     <p>" + recipeObject.label + "</p>\n" + " </div>\n" + ' <div class="card-footer">\n' + "     <p>" + Math.trunc(recipeObject.calories) + ".Kcal&nbsp;|&nbsp;" + recipeObject.ingredients.length + ".Ingredients</p>\n" + '<p><i class="fa-solid fa-clock-rotate-left"></i>&nbsp;' + recipeObject.totalTime + "</p>\n" + " </div>\n" + " </a>";
+                recipesHTML += '<a href="recipe-detail.html?recipeID=' + recipeDetailId + '" class="card card-1" id="card">\n' + ' <div class="card-header card-image">\n' + '    <img alt="recipe image" src=' + recipeObject.image + ">\n" + "     </div>\n" + ' <div class="card-body">\n' + "     <p>" + recipeObject.label + "</p>\n" + " </div>\n" + ' <div class="card-footer">\n' + "     <p>" + Math.trunc(recipeObject.calories) + ".Kcal&nbsp;|&nbsp;" + recipeObject.ingredients.length + ".Ingredients</p>\n" + '<p><i class="fa-solid fa-clock-rotate-left"></i>&nbsp;' + recipeObject.totalTime + "</p>\n" + " </div>\n" + " </a>";
             }
             searchContainer.innerHTML = recipesHTML;
         }
