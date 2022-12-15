@@ -14,7 +14,7 @@ sliderData().then((result) => {
             TrackHTML +=
                 '<a href=' + slideObject.url + ' class="slide" id="slide">\n' +
                 '<div class="slide-header slide-image">\n' +
-                '<img alt="" src=' + slideObject.image + '>\n' +
+                '<img alt="recipe image" src=' + slideObject.image + '>\n' +
                 '</div>\n' +
                 '<div class="slide-body">\n' +
                 '<p>' + slideObject.label + '</p>\n' +
@@ -65,7 +65,7 @@ searchSubmit.addEventListener('click', () => {
                     recipesHTML +=
                         '<a href="recipe-detail.html?recipeID=' + recipeDetailId + '" class="card card-1" id="card">\n' +
                         ' <div class="card-header card-image">\n' +
-                        '    <img alt="" src=' + recipeObject.image + '>\n' +
+                        '    <img alt="recipe image" src=' + recipeObject.image + '>\n' +
                         '     </div>\n' +
                         ' <div class="card-body">\n' +
                         '     <p>' + recipeObject.label + '</p>\n' +
