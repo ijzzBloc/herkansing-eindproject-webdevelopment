@@ -1,5 +1,5 @@
-const axios = require('axios').default;
-//****************************************Slider****************************************//
+//***********************************Slider****************************************//
+//***********************************Import and inject result from get request @main.js**//
 import {
     sliderData
 } from './main'
@@ -15,7 +15,7 @@ sliderData().then((result) => {
             TrackHTML +=
                 '<a href=' + slideObject.url + ' class="slide" id="slide">\n' +
                 '<div class="slide-header slide-image">\n' +
-                '<img alt="" src=' + slideObject.image + '>\n' +
+                '<img alt="recipe image" src=' + slideObject.image + '>\n' +
                 '</div>\n' +
                 '<div class="slide-body">\n' +
                 '<p>' + slideObject.label + '</p>\n' +
@@ -33,7 +33,8 @@ sliderData().then((result) => {
         slideTrack.innerHTML = TrackHTML;
     }
 })
-//****************************************Search****************************************//
+//***********************************Search****************************************//
+//***********************************Import and inject result based on user input @main.js**//
 import {
     fetchData
 } from "./main"
@@ -55,21 +56,18 @@ searchSubmit.addEventListener('click', () => {
         fetchData(userInputText, mtOptValue, csOptValue, dtOptValue, tmOptValue).then((result) => {
             searchContainer.innerHTML = "";
             let recipesResult = result;
-            console.log(recipesResult)
             let recipesResultCount = recipesResult.data.hits.length
             if (recipesResultCount >= 1) {
                 let recipesHTML = ""
                 for (let i = 0; i < recipesResultCount; i++) {
-                    console.log(recipesResult.data.hits[i].recipe)
                     let recipeObject = recipesResult.data.hits[i].recipe;
                     let recipeDetail = recipeObject.uri
                     let recipeDetailArray = recipeDetail.split('_')
                     let recipeDetailId = recipeDetailArray[1]
-                    console.log(recipeDetailId)
                     recipesHTML +=
                         '<a href="recipe-detail.html?recipeID=' + recipeDetailId + '" class="card card-1" id="card">\n' +
                         ' <div class="card-header card-image">\n' +
-                        '    <img alt="" src=' + recipeObject.image + '>\n' +
+                        '    <img alt="recipe image" src=' + recipeObject.image + '>\n' +
                         '     </div>\n' +
                         ' <div class="card-body">\n' +
                         '     <p>' + recipeObject.label + '</p>\n' +
@@ -90,7 +88,3 @@ searchSubmit.addEventListener('click', () => {
         alert('Please enter a query in searchbar.')
     }
 })
-
-function clearBox(elementID) {
-    document.getElementById(elementID).innerHTML = "";
-}

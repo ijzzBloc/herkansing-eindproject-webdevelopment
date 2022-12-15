@@ -532,6 +532,8 @@ function hmrAcceptRun(bundle, id) {
 }
 
 },{}],"9WiAu":[function(require,module,exports) {
+//***********************************Ingredient search**************************//
+//***********************************Import result based on user input to inject**//
 var _main = require("./main");
 let calcInput = document.getElementById("kcalsearch");
 let calcSubmit = document.getElementById("kcal-search-bttn");
@@ -548,17 +550,18 @@ calcSubmit.addEventListener("click", ()=>{
     if (calcInputText !== "") (0, _main.calcData)(calcInputText).then((result)=>{
         infoContainer.innerHTML = "";
         let kcalResult = result;
-        console.log(kcalResult.data.parsed);
         let kcalHTML = "";
         let kcalObject = kcalResult.data.parsed;
         kcalHTML += '<div id="info">\n<table class="resultstable">\n<tr>\n<th>Product</th>\n<th>Quantity</th>\n<th>Unit</th>\n</tr>\n<tr>\n<td>' + kcalObject[0].food.label + "</td>\n" + "<td>" + kcalObject[0].quantity + "</td>\n" + "<td>" + kcalObject[0].measure.label + "</td>\n" + "</tr>\n" + "</table>\n" + "</div>";
         infoContainer.innerHTML = kcalHTML;
         foundIngredient = kcalObject[0];
-    }).catch((reason)=>{
+    }).catch(()=>{
         alert("Product cannot be found, please try again.");
     });
     else alert("Please enter a product in searchbar.");
 });
+//***********************************Calculator**************************//
+//***********************************inject table and calculate result**//
 addBttn.addEventListener("click", ()=>{
     if (foundIngredient != null || servingAmount.value === "") {
         doCalc(foundIngredient);
@@ -590,10 +593,11 @@ addBttn.addEventListener("click", ()=>{
         infoContainer.innerHTML = "";
     }
 });
+//***********************************Counter function**************************//
+//***********************************Counter and calculate additional result from Ingredient search**//
 function doCalc(ingredientResult) {
     if (ingredientResult != null) {
         addIngredients(ingredientResult, servingAmount.value);
-        console.log(ingredients);
         counter++;
     } else console.log("empty result");
 }

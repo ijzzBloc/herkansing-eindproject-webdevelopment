@@ -534,12 +534,17 @@ function hmrAcceptRun(bundle, id) {
 },{}],"gLLPy":[function(require,module,exports) {
 var parcelHelpers = require("@parcel/transformer-js/src/esmodule-helpers.js");
 parcelHelpers.defineInteropFlag(exports);
-//****************************************Slider****************************************//
+//***********************************Slider****************************************//
+//***********************************Get request to inject random recipes @index.js**//
 parcelHelpers.export(exports, "sliderData", ()=>sliderData);
 //****************************************Search****************************************//
+//****************************************Get request based on user input to inject @index.js**//
 parcelHelpers.export(exports, "fetchData", ()=>fetchData);
+//***********************************Recipe ID**************************//
+//***********************************Fetches ID from recipe chosen by user to export for inject @recipe-detail.js**//
 parcelHelpers.export(exports, "fetchRecipe", ()=>fetchRecipe);
-//****************************************Calculator****************************************//
+//***********************************Calculator****************************************//
+//***********************************Get request @calculator.js***********************//
 parcelHelpers.export(exports, "calcData", ()=>calcData);
 require("dotenv").config();
 const axios = require("axios").default;
@@ -561,9 +566,7 @@ async function sliderData() {
                 reject(result);
             });
         });
-    } catch (e) {
-        console.log(e);
-    }
+    } catch (e) {}
 }
 async function fetchData(query, mtOptValue, csOptValue, dtOptValue, tmOptValue) {
     try {
@@ -585,9 +588,7 @@ async function fetchData(query, mtOptValue, csOptValue, dtOptValue, tmOptValue) 
                 reject(result);
             });
         });
-    } catch (e) {
-        console.log(e);
-    }
+    } catch (e) {}
 }
 async function fetchRecipe(recipeID) {
     try {
@@ -604,9 +605,7 @@ async function fetchRecipe(recipeID) {
                 reject(result);
             });
         });
-    } catch (e) {
-        console.log(e);
-    }
+    } catch (e) {}
 }
 async function calcData(calcInputText) {
     try {
@@ -623,9 +622,7 @@ async function calcData(calcInputText) {
                 reject(result);
             });
         });
-    } catch (e) {
-        console.log(e);
-    }
+    } catch (e) {}
 }
 
 },{"dotenv":"lErsX","axios":"jo6P5","@parcel/transformer-js/src/esmodule-helpers.js":"gkKU3"}],"lErsX":[function(require,module,exports) {

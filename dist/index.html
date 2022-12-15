@@ -15,14 +15,23 @@
 <!----------------------------------------Header---------------------------------------->
 <header class="header-container">
   <p class="header-item header-item-1">The Clueless Cook</p>
-  <div class="header-item header-item-2">
-    <a class="navbar-a" href="/index.html">home</a>
-    <a class="navbar-a" href="/recipe-detail.html">about</a>
-    <a class="navbar-a" href="/calculator.html">calculator</a>
-  </div>
+  <nav class="header-item header-item-2">
+    <ul class="header-item header-item-2">
+      <li>
+        <a class="navbar-a" href="/index.html">home</a>
+      </li>
+      <li>
+        <a class="navbar-a" href="/recipe-detail.html">about</a>
+      </li>
+      <li>
+        <a class="navbar-a" href="/calculator.html">calculator</a>
+      </li>
+    </ul>
+  </nav>
 </header>
 <main>
-  <!----------------------------------------Hero section---------------------------------------->
+  <!-----------------------------------Hero section---------------------------------------->
+  <!-----------------------------------background image right below the header------------->
   <section class="main-container">
     <h2 class="hero-text hero-header">Delicious Recipes.</h2>
     <p class="hero-text hero-par">Updated Daily.</p>
@@ -30,11 +39,13 @@
   <div class="recomendation">
     <p>Recomendation of the month:&nbsp;&nbsp;'Vegan Salads'</p>
   </div>
-  <!----------------------------------------Slider---------------------------------------->
+  <!-----------------------------------Slider---------------------------------------->
+  <!-----------------------------------section that holds the image slider for random recipes--->
   <section class="slider-container">
     <section class="slide-track" id="slide-track"></section>
   </section>
-  <!----------------------------------------Search bar---------------------------------------->
+  <!-----------------------------------Search bar---------------------------------------->
+  <!-----------------------------------Section containing search bar and selection menu's-->
   <section class="searchbar-container">
     <section class="searchbar-inner-container">
       <div class="search-box" data-tooltip="Space multiple ingredients out e.g. 'Chicken, Broccoli'">
@@ -99,13 +110,14 @@
           </select>
         </label>
         <button class="searh-bttn" id="search-bttn" type="button">
-          <p>Search</p>
+          Search
           <i class="fa-solid fa-arrow-right-long"></i>
         </button>
       </div>
     </section>
   </section>
-  <!----------------------------------------Search results---------------------------------------->
+  <!-----------------------------------Search results---------------------------------------->
+  <!-----------------------------------Section where search results are injected after search-->
   <section class="searchresult-container">
     <section class="searchresult-inner-container" id="searchresult-inner-container"></section>
   </section>

@@ -1,3 +1,5 @@
+//***********************************Ingredient search**************************//
+//***********************************Import result based on user input to inject**//
 import {calcData} from "./main";
 
 let calcInput = document.getElementById('kcalsearch');
@@ -18,7 +20,6 @@ calcSubmit.addEventListener('click', () => {
         calcData(calcInputText).then((result) => {
             infoContainer.innerHTML = "";
             let kcalResult = result;
-            console.log(kcalResult.data.parsed)
             let kcalHTML = ""
             let kcalObject = kcalResult.data.parsed;
             kcalHTML +=
@@ -39,14 +40,15 @@ calcSubmit.addEventListener('click', () => {
             infoContainer.innerHTML = kcalHTML;
             foundIngredient = kcalObject[0];
         })
-            .catch(reason => {
+            .catch(() => {
                 alert('Product cannot be found, please try again.')
             })
     } else {
         alert('Please enter a product in searchbar.')
     }
 })
-
+//***********************************Calculator**************************//
+//***********************************inject table and calculate result**//
 addBttn.addEventListener('click', () => {
     if (foundIngredient != null || servingAmount.value === '') {
         doCalc(foundIngredient);
@@ -95,11 +97,11 @@ addBttn.addEventListener('click', () => {
 
 });
 
-
+//***********************************Counter function**************************//
+//***********************************Counter and calculate additional result from Ingredient search**//
 function doCalc(ingredientResult) {
     if (ingredientResult != null) {
         addIngredients(ingredientResult, servingAmount.value)
-        console.log(ingredients);
         counter++;
 
     } else {

@@ -263,7 +263,7 @@
     font-size: 1em;
 }
 
-.searh-bttn > p, i {
+.searh-bttn > i {
     background: var(--lightcolor);
     font-size: 1.1em;
 }
